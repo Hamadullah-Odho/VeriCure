@@ -5,6 +5,23 @@ VeriCure is a counterfeit-medicine detection system. It combines a mobile app
 API (image classification + Urdu text‑to‑speech), and an admin web
 dashboard for reviewing detections and reports.
 
+## Features
+
+**Mobile app**
+- Scan a medicine and get an instant authenticity verdict
+- Save scan history and revisit past results
+- Home medicine cabinet — track medicines you own, with expiry dates
+- Report a counterfeit or suspicious medicine
+- AI chat assistant for medicine-related questions
+- Urdu text-to-speech for scan results and insights
+- Account features: register, login, OTP verification, password reset/change
+
+**Admin dashboard**
+- Review and approve/reject pending medicine submissions
+- Browse all detections and reported medicines
+- Manage admin accounts
+- Generate reports (PDF export)
+
 ## Project structure
 
 ```
