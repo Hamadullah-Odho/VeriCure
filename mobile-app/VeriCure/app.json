@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "VeriCure",
+    "slug": "VeriCure",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "VeriCure uses your location to tag where a counterfeit medicine was detected, helping authorities track and respond to fake medicine distribution."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "usesCleartextTraffic": true,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ],
+      "package": "com.hamadullah.VeriCure"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "VeriCure uses your location to tag where a counterfeit medicine was detected, helping authorities track and respond to fake medicine distribution."
+        }
+      ],
+      "expo-status-bar",
+      "expo-asset",
+      "expo-audio"
+    ],
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

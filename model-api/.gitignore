@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# virtual envs
+venv/
+.venv/
+env/
+
+# env files
+.env
+
+# test/scratch artifacts
+*.wav
+
+# OS
+.DS_Store
