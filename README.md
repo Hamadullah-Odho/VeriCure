@@ -155,6 +155,42 @@ for a native build.
 
 ---
 
+## Architecture
+
+```mermaid
+flowchart TB
+    subgraph Client Layer
+        A[Mobile App<br/>React Native / Expo]
+        B[Admin Website<br/>React + Vite]
+    end
+
+    subgraph Backend Layer
+        C[Spring Boot Backend<br/>REST API]
+    end
+
+    subgraph AI Layer
+        D[Model API<br/>FastAPI + TensorFlow/Keras<br/>Image Classification]
+        E[Urdu TTS Service<br/>FastAPI + Piper]
+    end
+
+    subgraph Data Layer
+        F[(MySQL<br/>vericure_db)]
+    end
+
+    A -- "HTTP: scan, auth, reports" --> C
+    B -- "HTTP /api: manage detections, approvals" --> C
+    C -- "classify medicine image" --> D
+    C -- "generate Urdu speech" --> E
+    C -- "JPA / SQL" --> F
+
+    style A fill:#E6F4FE,stroke:#333
+    style B fill:#E6F4FE,stroke:#333
+    style C fill:#FFF3CD,stroke:#333
+    style D fill:#D4EDDA,stroke:#333
+    style E fill:#D4EDDA,stroke:#333
+    style F fill:#F8D7DA,stroke:#333
+```
+
 ## Known limitations / notes
 
 - This is a Final Year Project (FYP) build, not a production-hardened
