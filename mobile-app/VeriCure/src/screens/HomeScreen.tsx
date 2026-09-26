@@ -14,6 +14,7 @@ import {
 
 import BottomNavBar from '../screens/BottomNavBar';
 import { useTheme } from '../theme/ThemeContext';
+import { Ionicons } from '@expo/vector-icons';
 
 import {
   fetchVerificationHistory,
@@ -234,9 +235,11 @@ export default function HomeScreen({
                 },
               ]}
             >
-              <Text style={styles.welcomeIcon}>
-                🛡️
-              </Text>
+              <Ionicons
+                name="shield-checkmark-outline"
+                size={23}
+                color={colors.primary}
+              />
             </View>
 
             <View style={styles.welcomeTextContainer}>
@@ -290,9 +293,11 @@ export default function HomeScreen({
                 },
               ]}
             >
-              <Text style={styles.scanIcon}>
-                📷
-              </Text>
+              <Ionicons
+                name="camera-outline"
+                size={23}
+                color={colors.primary}
+              />
             </View>
 
             <Text

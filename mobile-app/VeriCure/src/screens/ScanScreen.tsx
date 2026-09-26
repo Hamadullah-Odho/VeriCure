@@ -876,7 +876,7 @@ export default function ScanScreen({
                 />
               ) : (
                 <Ionicons
-                  name="shield-checkmark-outline"
+                  name="checkmark-circle-outline"
                   size={19}
                   color={colors.white}
                 />
