@@ -5,7 +5,6 @@ import React, {
 } from 'react';
 
 import {
-  SafeAreaView,
   StyleSheet,
   StatusBar,
   View,
@@ -19,6 +18,8 @@ import {
   PanResponder,
 } from 'react-native';
 
+
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -107,9 +108,11 @@ type OtpPurpose =
 
 export default function App() {
   return (
-    <ThemeProvider>
-      <AppContent />
-    </ThemeProvider>
+    <SafeAreaProvider>
+      <ThemeProvider>
+        <AppContent />
+      </ThemeProvider>
+    </SafeAreaProvider>
   );
 }
 
@@ -2461,7 +2464,7 @@ function AppContent() {
      ========================================================== */
 
   return (
-    <SafeAreaView
+    <View
       style={[
         styles.container,
         {
@@ -2626,7 +2629,7 @@ function AppContent() {
         </View>
       )}
 
-    </SafeAreaView>
+    </View>
   );
 }
 
@@ -2642,6 +2645,9 @@ const styles = StyleSheet.create({
 
   content: {
     flex: 1,
+    width: '100%',
+    maxWidth: 900,
+    alignSelf: 'center',
   },
 
   /* ========================================================

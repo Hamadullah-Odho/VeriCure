@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 import {
   StyleSheet,
   View,
@@ -39,7 +41,7 @@ export default function SplashScreen({ onFinish }: Props) {
   // ==========================================================
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.content}>
 
         {/* ==================================================
@@ -89,7 +91,7 @@ export default function SplashScreen({ onFinish }: Props) {
       <Text style={styles.version}>
         Medicine Verification System
       </Text>
-    </View>
+    </SafeAreaView>
   );
 }
 

@@ -11,6 +11,7 @@ import {
 
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../theme/ThemeContext';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 type Tab = 'home' | 'insights' | 'profile';
 
@@ -50,6 +51,7 @@ export default function BottomNavBar({
   onTabChange,
 }: Props) {
   const { colors } = useTheme();
+  const insets = useSafeAreaInsets();
 
   const activeIndex = TABS.findIndex(
     (tab) => tab.key === activeTab
@@ -115,7 +117,12 @@ export default function BottomNavBar({
 
   return (
     <View
-      style={styles.floatingWrapper}
+      style={[
+        styles.floatingWrapper,
+        {
+          bottom: insets.bottom + 12,
+        },
+      ]}
       pointerEvents="box-none"
     >
       <View
@@ -225,7 +232,7 @@ const styles = StyleSheet.create({
 
     left: 0,
     right: 0,
-    bottom: 24,
+    bottom: 12,
 
     alignItems: 'center',
 
@@ -239,6 +246,7 @@ const styles = StyleSheet.create({
    */
   shadowWrapper: {
     width: '88%',
+    maxWidth: 520,
     borderRadius: 32,
 
     shadowOffset: {

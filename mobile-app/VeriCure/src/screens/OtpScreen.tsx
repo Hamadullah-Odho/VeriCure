@@ -1,13 +1,14 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 import {
   StyleSheet,
   Text,
   View,
   TextInput,
   TouchableOpacity,
-  SafeAreaView,
   KeyboardAvoidingView,
   Platform,
   ScrollView,
@@ -31,7 +32,7 @@ import { useTheme } from '../theme/ThemeContext';
 
 import { API_BASE_URL } from '../config/api';
 
-const { width } = Dimensions.get('window');
+const width = Math.min(Dimensions.get('window').width, 500);
 
 /* ============================================================
    PROPS
