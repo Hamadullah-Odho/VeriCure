@@ -29,9 +29,9 @@ public class EmailService {
     private static final String BRAND_NAME = "VeriCure";
     private static final String BRAND_TAGLINE = "Scan. Verify. Trust.";
 
-    // Matches the app's dark navy + cyan theme.
-    private static final String COLOR_HEADER_BG = "#0B1220";
-    private static final String COLOR_ACCENT = "#22D3EE";
+    // Matches the app's dark theme.
+    private static final String COLOR_HEADER_BG = "#171717";
+    private static final String COLOR_ACCENT = "#A5B4FC";
     private static final String COLOR_TEXT = "#1F2937";
     private static final String COLOR_MUTED = "#6B7280";
     private static final String COLOR_PAGE_BG = "#F3F4F6";
@@ -226,7 +226,7 @@ public class EmailService {
                 + "<tr>"
                 + "<td style=\"background-color: " + COLOR_HEADER_BG + "; padding: 28px 40px; text-align: center;\">"
                 + "<div style=\"font-size: 22px; font-weight: 800; color: #FFFFFF; letter-spacing: 0.5px;\">"
-                + "🛡️ " + BRAND_NAME
+                + BRAND_NAME
                 + "</div>"
                 + "<div style=\"margin-top: 4px; font-size: 12px; color: " + COLOR_ACCENT + "; letter-spacing: 1px; text-transform: uppercase;\">"
                 + BRAND_TAGLINE
