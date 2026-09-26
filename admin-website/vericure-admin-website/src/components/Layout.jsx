@@ -88,7 +88,7 @@ export function ProtectedLayout() {
     <div className="app-shell">
       <div className="topnav">
         <div className="topnav-inner">
-          <div className="topnav-logo">🛡️ VeriCure</div>
+          <div className="topnav-logo">VeriCure</div>
 
           <div className="topnav-links">
             {allNavItems.map((item) => (
