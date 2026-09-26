@@ -48,7 +48,7 @@ export default function SplashScreen({ onFinish }: Props) {
 
         <View style={styles.logoContainer}>
           <Image
-            source={require('../../assets/vericure_logo.png')}
+            source={require('../../assets/icon.png')}
             style={styles.logoImage}
             resizeMode="contain"
           />
